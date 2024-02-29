@@ -5,12 +5,12 @@
 
 class Computer : public Player {
 public:
-    Computer(const std::string& name = "Computer");
+    Computer(string name = "Computer");
+    string getName() override;
     char makeMove() override;
-    std::string getName() const override;
 
 private:
-    std::string name;
+    string name;
 };
 
 #endif 

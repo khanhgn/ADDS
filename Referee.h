@@ -1,4 +1,3 @@
-// Referee.h
 #ifndef REFEREE_H
 #define REFEREE_H
 
@@ -11,4 +10,4 @@ public:
 
 };
 
-#endif // REFEREE_H
+#endif 

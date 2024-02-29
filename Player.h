@@ -2,12 +2,12 @@
 #define PLAYER_H
 
 #include <string>
+using namespace std;
 
 class Player {
 public:
     virtual char makeMove() = 0;
-    virtual std::string getName() const = 0;
-    virtual ~Player() {}
+    virtual string getName() = 0;
 };
 
 #endif 
