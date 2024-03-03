@@ -1,6 +1,7 @@
 #include "Human.h"
 #include "Computer.h"
 #include "Referee.h"
+#include "Player.h"
 using namespace std;
 #include<iostream>
 int main(){
@@ -9,9 +10,9 @@ int main(){
     Referee ref;
     Player* winner = ref.refGame(&human,&comp);
     if (winner == nullptr) {
-        std::cout << "It's a Tie." << std::endl;
+        cout << "It's a Tie." << endl;
     } else {
-        std::cout << winner->getName() << " Wins." << std::endl;
+        cout << winner->getName() << " Wins." << endl;
     }
     return 0;
 }

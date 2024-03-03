@@ -1,11 +1,11 @@
 #include "Computer.h"
 
-Computer::Computer(std::string name) : name(name) {}
+Computer::Computer(string name) : name(name) {}
 
 char Computer::makeMove() {
     return 'R'; 
 }
 
-std::string Computer::getName() {
+string Computer::getName() {
     return name;
 }
