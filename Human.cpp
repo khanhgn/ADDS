@@ -3,7 +3,7 @@
 #include <iostream>
 
 
-Human::Human(): name("John"){}
+Human::Human(): name("Human"){}
 
 Human::Human(std::string name): name(name){}
 
