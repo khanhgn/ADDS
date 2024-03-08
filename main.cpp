@@ -7,6 +7,8 @@ using namespace std;
 int main(){
     Human human("Khanh");
     Computer comp;
+    cout<<comp.getName();
+    cout<<human.getName();
     Referee ref;
     Player* winner = ref.refGame(&human,&comp);
     if (winner == nullptr) {
