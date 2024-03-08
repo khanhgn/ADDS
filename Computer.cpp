@@ -3,7 +3,7 @@
 #include <iostream>
 
 
-Computer::Computer(): name("John"){}
+Computer::Computer(): name("Computer"){}
 
 Computer::Computer(std::string name): name(name){}
 
