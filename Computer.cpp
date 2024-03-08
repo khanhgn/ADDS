@@ -8,9 +8,7 @@ Computer::Computer(): name("John"){}
 Computer::Computer(std::string name): name(name){}
 
 Move* Computer:: makeMove(){
-    std::string newMove;
-    std::cout<<"Enter move: ";
-    std::cin>> newMove;
+    std::string newMove = "Rock";
     Move* playerMove = moveLists.selectMove(newMove);
     return playerMove;
 }

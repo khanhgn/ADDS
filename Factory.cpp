@@ -15,9 +15,10 @@ Factory::Factory(){
 }
 
 Move* Factory::selectMove(std::string selection){
-    if(list.find(selection)!=list.end()){
-        return list[selection];
-    } else {
+    while(list.find(selection)==list.end()){
         std::cout<<"Bad Choice"<<std::endl;
+        std::cout<<"Enter Valide Move: "<<std::endl;
+        std::cin>>selection;
     }
+    return list[selection];
 }
