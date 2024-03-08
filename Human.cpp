@@ -9,7 +9,7 @@ Human::Human(std::string name): name(name){}
 
 Move* Human:: makeMove(){
     std::string newMove;
-    std::cout<<"Enter move: ";
+    // std::cout<<"Enter move: ";
     std::cin>> newMove;
     Move* playerMove = moveLists.selectMove(newMove);
     return playerMove;
