@@ -1,6 +1,10 @@
 #include <iostream>
+#include <cmath>
+#include <string>
+
 #include "Reverser.h"
 int Reverser::reverseDigit(int value){
+    if(value<0) return -1;
     if(value/10==0){
         return value;
     }
@@ -23,7 +27,7 @@ std::string Reverser::reverseString(std::string characters){
 
 // int main(){
 //     Reverser obj;
-//     std::cout<<obj.reverseDigit(-100)<<std::endl;
+//     std::cout<<obj.reverseDigit(123456)<<std::endl;
 //     std::cout<<obj.reverseString("hello world")<<std::endl;
 //     return 0;
 // }

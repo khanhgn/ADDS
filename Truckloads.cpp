@@ -1,4 +1,7 @@
 #include <iostream>
+#include <cmath>
+#include <string>
+
 #include "Truckloads.h"
 
 void Truckloads::numTrucks(int numCrates, int loadSize){
