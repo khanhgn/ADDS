@@ -4,23 +4,23 @@
 
 #include "Truckloads.h"
 
-void Truckloads::numTrucks(int numCrates, int loadSize){
+int Truckloads::numTrucks(int numCrates, int loadSize){
     if(numCrates <= loadSize){
-        trucks++;
-        return;
+        return 1;
     }
+    int res = 0;
     int curr = numCrates/2;
-    numTrucks(curr,loadSize);
-    numTrucks(numCrates-(int)curr,loadSize);
+    res += numTrucks(curr,loadSize);
+    res += numTrucks(numCrates-(int)curr,loadSize);
+    return res;
 }
 
-int Truckloads::getTrucks(){
-    return trucks;
-}
+// int Truckloads::getTrucks(){
+//     return trucks;
+// }
 
 // int main(){
 //     Truckloads truck;
-//     truck.numTrucks(1024,5);
-//     std::cout<<truck.getTrucks()<<std::endl;
+//     std::cout<< truck.numTrucks(1024,5)<<std::endl;
 //     return 0;
 // }
