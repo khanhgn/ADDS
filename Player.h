@@ -1,12 +1,13 @@
 #ifndef PLAYER_H
 #define PLAYER_H
-#include "MoveFactory.h"
+#include "MoveManager.h"
 
 #include <string>
 
 class Player {
+protected:
+    MoveManager moveLists;
 public:
-    MoveFactory moveLists;
     virtual Move* makeMove() = 0;
     virtual std::string getName() = 0;
 };

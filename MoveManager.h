@@ -1,5 +1,5 @@
-#ifndef MOVEFACTORY_H
-#define MOVEFACTORY_H
+#ifndef MOVEMANAGER_H
+#define MOVEMANAGER_H
 
 #include "Move.h"
 #include "Rock.h"
@@ -13,7 +13,7 @@
 #include <unordered_map>
 #include <string>
 
-class MoveFactory {
+class MoveManager {
 private:
     Rock rock;
     Paper paper;
@@ -23,9 +23,9 @@ private:
     Ninja ninja;
     Robot robot;
     Monkey monkey;
-public:
     std::unordered_map<std::string,Move*> moveList;
-    MoveFactory();
+public:
+    MoveManager();
     Move* selectMove(std::string selection);
 };
 

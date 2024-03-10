@@ -10,7 +10,6 @@ private:
     std::string name;
 public:
     Computer();
-    Computer(std::string name);
     Move* makeMove() override;
     std::string getName() override;
 };

@@ -5,8 +5,6 @@
 
 Computer::Computer(): name("Computer"){}
 
-Computer::Computer(std::string name): name(name){}
-
 Move* Computer:: makeMove(){
     std::string newMove = "Rock";
     Move* playerMove = moveLists.selectMove(newMove);

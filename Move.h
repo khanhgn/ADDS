@@ -5,9 +5,10 @@
 #include <unordered_set>
 
 class Move{
-public:
+protected:
     std::string name;
     std::unordered_set<std::string> winConditions;
+public:
     std::string getName();
     std::unordered_set<std::string> findWin();
 };
