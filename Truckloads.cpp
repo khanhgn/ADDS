@@ -1,27 +1,23 @@
 #include <iostream>
+#include "Truckloads.h"
 
-class Truckloads {
-private:
-    int trucks = 0;
-    int count = 0;
-public:
-    void numTrucks(int numCrates, int loadSize){
-        if(numCrates <= loadSize){
-            trucks++;
-            return;
-        }
-        int curr = numCrates/2;
-        numTrucks(curr,loadSize);
-        numTrucks(numCrates-(int)curr,loadSize);
+void Truckloads::numTrucks(int numCrates, int loadSize){
+    if(numCrates <= loadSize){
+        trucks++;
+        return;
     }
-    int getTrucks(){
-        return trucks;
-    }
-};
-
-int main(){
-    Truckloads truck;
-    truck.numTrucks(1024,5);
-    std::cout<<truck.getTrucks()<<std::endl;
-    return 0;
+    int curr = numCrates/2;
+    numTrucks(curr,loadSize);
+    numTrucks(numCrates-(int)curr,loadSize);
 }
+
+int Truckloads::getTrucks(){
+    return trucks;
+}
+
+// int main(){
+//     Truckloads truck;
+//     truck.numTrucks(1024,5);
+//     std::cout<<truck.getTrucks()<<std::endl;
+//     return 0;
+// }
