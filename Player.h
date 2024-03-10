@@ -1,12 +1,12 @@
 #ifndef PLAYER_H
 #define PLAYER_H
-#include "Factory.h"
+#include "MoveFactory.h"
 
 #include <string>
 
 class Player {
 public:
-    Factory moveLists;
+    MoveFactory moveLists;
     virtual Move* makeMove() = 0;
     virtual std::string getName() = 0;
 };

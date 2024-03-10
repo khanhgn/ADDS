@@ -1,8 +1,8 @@
-#include "Factory.h"
+#include "MoveFactory.h"
 #include <iostream>
 
-Factory::Factory(){
-    list = {
+MoveFactory::MoveFactory(){
+    moveList = {
         {"Rock",&rock},
         {"Paper",&paper},
         {"Scissors",&scissors},
@@ -14,11 +14,11 @@ Factory::Factory(){
     };
 }
 
-Move* Factory::selectMove(std::string selection){
-    while(list.find(selection)==list.end()){
+Move* MoveFactory::selectMove(std::string selection){
+    while(moveList.find(selection)==moveList.end()){
         std::cout<<"Bad Choice"<<std::endl;
         std::cout<<"Enter Valide Move: "<<std::endl;
         std::cin>>selection;
     }
-    return list[selection];
+    return moveList[selection];
 }

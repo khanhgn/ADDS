@@ -13,6 +13,6 @@ Player* Referee::refGame(Player* player1, Player* player2) {
     } else {
         return nullptr; 
     }
-
+    return nullptr;
 }
 

@@ -1,3 +1,6 @@
+#ifndef MOVEFACTORY_H
+#define MOVEFACTORY_H
+
 #include "Move.h"
 #include "Rock.h"
 #include "Scissors.h"
@@ -10,7 +13,7 @@
 #include <unordered_map>
 #include <string>
 
-class Factory {
+class MoveFactory {
 private:
     Rock rock;
     Paper paper;
@@ -21,7 +24,9 @@ private:
     Robot robot;
     Monkey monkey;
 public:
-    std::unordered_map<std::string,Move*> list;
-    Factory();
+    std::unordered_map<std::string,Move*> moveList;
+    MoveFactory();
     Move* selectMove(std::string selection);
 };
+
+#endif
